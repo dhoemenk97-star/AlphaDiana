@@ -4,20 +4,6 @@ AlphaDiana is an evaluation framework for Foundation Model and Agent systems, su
 
 This tutorial takes **Qwen3-8B + AIME 2024** as an example to start from scratch and build and run the evaluation step by step.
 
-## Directory
-
-- [0. Architecture Overview](#0-Architecture Overview)
-- [1. Environment preparation](#1-Environment preparation)
-- [2. Install AlphaDiana](#2-Install-alphadiana)
-- [3. Quick verification (Direct LLM baseline)] (#3-Quick verification direct-llm-baseline)
-- [4. Build a ROCK sandbox environment] (#4-Build-rock-sandbox environment)
-- [5. Deploy OpenClaw Agent](#5-deployment-openclaw-agent)
-- [6. Run OpenClaw-evaluation](#6-run-openclaw-evaluation)
-- [7. View and analyze results](#7-View and analyze results)
-- [8. Custom configuration](#8-Custom configuration)
-- [Appendix A: Project Structure](#Appendix-aProject Structure)
-- [Appendix B: Frequently Asked Questions](#Appendix-bFrequently Asked Questions)
-
 ---
 
 ## 0. Architecture Overview

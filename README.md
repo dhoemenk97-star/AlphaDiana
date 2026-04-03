@@ -58,6 +58,8 @@ cd AlphaDiana
 # One-click setup: creates conda env, installs all dependencies, starts services
 bash scripts/quickstart.sh
 
+# Note: If quickstart fails, or you want to reset the ports/RAY clusters, please run: bash scripts/cleanup_rock_ports.sh (USE WITH CAUTION!)
+
 # Pull the reasoning image (OpenClaw pre-installed)
 docker pull tmlrgroup/alphadiana:v1
 ```
