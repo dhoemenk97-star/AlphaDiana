@@ -112,6 +112,7 @@ class ExperimentConfig:
     def __post_init__(self):
         if not self.run_id:
             self.run_id = uuid.uuid4().hex[:12]
+        self.run_id = self.run_id.replace("/", "_")
 
     @classmethod
     def from_yaml(

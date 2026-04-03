@@ -72,12 +72,13 @@ docker pull tmlrgroup/alphadiana:v1
 
 ### 2. Configure your model
 
-Create a `.env` file in the project root with your model endpoint:
+Create a `.env` file in the project root with your model endpoint and set your api key:
 
 ```bash
-OPENAI_BASE_URL=https://openrouter.ai/api/v1
-OPENAI_API_KEY=<your-api-key>
-OPENAI_MODEL_NAME=z-ai/glm-5
+touch .env
+echo "OPENAI_BASE_URL=https://openrouter.ai/api/v1" >> .env
+echo "OPENAI_API_KEY=<your-api-key>" >> .env
+echo "OPENAI_MODEL_NAME=z-ai/glm-5" >> .env
 ```
 
 ### 3. Activate the environment
