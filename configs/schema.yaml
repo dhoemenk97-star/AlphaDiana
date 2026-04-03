@@ -1,0 +1,81 @@
+# AlphaDiana Experiment Configuration Schema
+#
+# All experiments are defined by a single YAML file with the following structure.
+
+# run_id: (optional) Unique identifier for this run. Auto-generated if omitted.
+run_id: string
+
+# agent: (required) Agent system configuration.
+agent:
+  name: string        # Agent name, e.g. "openclaw", "direct_llm"
+  version: string     # Pinned version tag or "latest"
+  config:             # Pass-through config for the agent (model settings, etc.)
+    model: string
+    api_base: string
+    gateway_token: string           # OpenClaw gateway auth token (default: "OPENCLAW")
+    rock_agent_config_path: string  # Path to ROCK agent config YAML
+    openclaw_config_path: string    # Path to OpenClaw gateway config JSON
+    api_key: string
+    temperature: float
+    max_tokens: integer
+    max_attempts: integer           # Retry attempts for OpenClaw (default: 3)
+    request_timeout: float          # HTTP request timeout in seconds (default: 600)
+    agent_md_mode: string           # Agent.md customization: "none", "append", "override" (default: "none")
+    agent_md_content: string        # Content for agent.md injection
+    embedding_api_base: string      # Embedding model API base URL
+    embedding_api_key: string       # Embedding model API key
+
+# benchmark: (required) Benchmark configuration.
+benchmark:
+  name: string        # Benchmark name, e.g. "aime", "custom"
+  config:             # Benchmark-specific params
+    split: string
+    year: string
+    subset: string
+    data_path: string
+
+# sandbox: (optional) Execution environment. Set to null if not needed.
+sandbox:
+  name: string        # Sandbox name, e.g. "local", "rock"
+  config:             # Sandbox-specific params
+    # ROCK SDK config
+    admin_base_url: string          # ROCK admin server URL (e.g. "http://localhost:9000")
+    proxy_base_url: string          # ROCK proxy server URL (e.g. "http://localhost:9001")
+    image: string                   # Docker image (default: "python:3.11")
+    memory: string                  # Memory limit, e.g. "2g", "512m" (default: "2g")
+    cpus: float                     # CPU limit (default: 0.5)
+    startup_timeout: integer        # Sandbox startup timeout in seconds (default: 300)
+    auto_clear_seconds: integer     # Auto-cleanup timeout in seconds (default: 3600)
+    start_retries: integer          # Number of startup retries (default: 1)
+    reset_between_tasks: boolean    # Reset workspace between tasks (default: true)
+    proxy_timeout: integer          # Proxy timeout in seconds (default: 600)
+    # Generic sandbox config
+    endpoint: string
+    api_key: string
+    workdir: string
+
+# scorer: (required) Scoring method configuration.
+scorer:
+  name: string        # Scorer name, e.g. "exact_match", "numeric", "llm_judge"
+  config:             # Scorer-specific params
+    tolerance: float
+    judge_model: string
+    api_base: string
+    api_key: string
+
+# max_concurrent: (optional, default=1) Number of parallel task executions.
+max_concurrent: integer
+
+# num_samples: (optional, default=1) Number of independent samples per task for pass@k evaluation.
+# When num_samples > 1, each task is solved k times independently, and pass@k is reported
+# as the fraction of tasks where at least 1 of k samples is correct.
+num_samples: integer
+
+# output_dir: (optional, default="./results") Directory for result output.
+output_dir: string
+
+# metadata: (optional) Free-form tags for tracking experiments.
+metadata:
+  author: string
+  gpu: string
+  notes: string
