@@ -1,0 +1,55 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+.Python
+env/
+build/
+dist/
+*.egg-info/
+*.egg
+.eggs/
+*.log
+
+# pyenv
+.python-version
+
+# virtualenv
+.venv/
+venv/
+ENV/
+
+# VSCode settings
+.vscode
+
+# IDEA files
+.idea
+
+# OSX dir files
+.DS_Store
+
+# Sublime Text settings
+*.sublime-workspace
+*.sublime-project
+
+# Claude Code
+.claude/
+.planning/
+
+# Redis dump
+dump.rdb
+
+# Results, configs, artifacts (generated at runtime)
+/results/
+!alphadiana/results/
+/configs/
+/artifacts/
+.cache
+node_modules/
+
+# dotenv
+.env
+
+ref/
